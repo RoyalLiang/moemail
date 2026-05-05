@@ -5,7 +5,11 @@ on:
     tags:
       - 'v*'
   workflow_dispatch:
-
+    inputs:
+      environment:
+        type: environment 
+        description: moemail
+        required: true
 jobs:
   deploy:
     runs-on: ubuntu-latest
